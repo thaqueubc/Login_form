@@ -1,0 +1,61 @@
+@charset "utf-8";
+
+body {
+    background-color: #818181;
+}
+
+.container {
+    background-color: #fff;
+}
+
+header {
+    color: white;
+    background-color: #043f8b;
+    margin: 0 -15px;
+    padding: 16px 20px;
+}
+
+header h1 {
+    margin-bottom: 0;
+}
+
+.username{
+    color: blue;
+    text-align: center;
+}
+
+
+/* Bootstrap Form Styles */
+.basic-form {
+    padding-top: 16px;
+    padding-bottom: 16px;
+}
+
+@media (min-width: 620px){
+    .basic-form {
+        border-radius: 8px;
+        border: 1px solid #797979;
+    }
+}
+
+
+@media (min-width: 620px){
+    .container {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    header {
+        margin: 0 -30px;
+    }
+
+    #login-form{
+        max-width: 500px;
+
+    }
+
+    .username{
+        color: blue
+    }
+
+}
