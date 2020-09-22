@@ -21,10 +21,6 @@ form.addEventListener('submit', (e) => {
     messages.push('Password must be longer than 4 characters');
   }
 
-  // if (password.value.length >= 20) {
-  //   messages.push('Password must be less than 20 characters');
-  // }
-
   if (password.value === 'password') {
     messages.push('Password cannot be password');
   }
@@ -37,4 +33,19 @@ form.addEventListener('submit', (e) => {
 
 function printName(n){
   console.log(n);
+}
+
+function signIn(){
+   const url = 'http://dummy.restapiexample.com/api/v1/employees';
+    
+  fetch(url, {
+  method: 'GET'
+  })
+  .then(response => response.json())
+  .then(result => {
+    console.log('Success:', result);
+  })
+  .catch(error => {
+    console.error('Error:', error);
+  });
 }

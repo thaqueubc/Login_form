@@ -14,9 +14,8 @@
     <div class="container">
         
         <div class="row justify-content-center ">
-          
-           
-            <form id="login-form" class="basic-form col-md-9" action="/" method="GET">
+             
+            <div id="login-form" class="basic-form col-md-9" >
                <div class="row">
                     <h1 class="form-group col-12"> Login </h1>
                </div>
@@ -27,21 +26,23 @@
                 <div class="row">
                     <div class="form-group col-12">
                         <label for="name" class="col-form-label">Name</label>
-                        <input id="name" name="name" type="text"  class="form-control username" onkeyup="printName(event.target.value)">
+                        <input id="name" name="name" type="text"  class="form-control" onkeyup="printName(event.target.value)">
                       </div>
       
                       <div class="form-group col -12">
                         <label for="password" class="col-form-label">Password</label>
-                        <input id="password" name="password" type="password" class="form-control username">
+                        <input id="password" name="password" type="password" class="form-control">
                     </div>
                 </div>
 
                <div class="row submit-group">
-                    <div class="form-group col-12 submit">
-                        <input type="submit" value="Submit" class="btn btn-primary d-block w-100">
+                    <div class="form-group col-12">
+                        <input type="submit" value="Submit" 
+                        class="btn btn-primary d-block w-100"
+                        onclick="signIn()">
                     </div>
                 </div>
-            </form>
+            </div>
         </div>
        
     </div>

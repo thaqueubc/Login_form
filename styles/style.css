@@ -8,30 +8,23 @@ body {
     background-color: #fff;
 }
 
-header {
-    color: white;
-    background-color: #043f8b;
-    margin: 0 -15px;
-    padding: 16px 20px;
-}
-
 h1 {
     margin-bottom: 0;
     color: white;
     text-align: center;
-    background-color: #043f8b;
+    background-color: #2d68b6;
     padding: 16px 20px; 
 }
 
 .basic-form {
     border-radius: 8px;
     border: 1px solid #797979;
-    /* padding-top: 16px; */
     padding-bottom: 16px;
 }
 
-.username{
-    color: blue;
+
+#name, #password {
+    color: #2d68b6;
     text-align: center;
 }
 
@@ -50,6 +43,7 @@ h1 {
 }
 
 
+
 /* Bootstrap Form Styles */
 
 @media (min-width: 620px){
@@ -58,12 +52,8 @@ h1 {
         padding-right: 30px;
     }
 
-    header {
-        margin: 0 -30px;
-    }
-
-    .username{
-        color: blue
+    #name, #password{
+        color:grey;
     }
 
 }
