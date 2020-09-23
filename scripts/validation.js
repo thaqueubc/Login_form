@@ -11,31 +11,34 @@ function printName(n){
 function validation(){
   form.addEventListener('click', (e) => {
     click++;
+    
     let messages = []
     if (name.value === '' || name.value == null) {
-      messages.push('Name is required')
+       messages=[...messages, 'Name is required'];
     }
   
-    if (name.value.length <= 2) {
-      messages.push('Name must be longer than 2 characters');
+    if (name.value.length < 2) {
+      messages=[...messages, 'Name must be longer than 2 characters'];
     }
   
     if (password.value === '' || password.value == null) {
-      messages.push('Password is required')
+      messages=[...messages, 'Password is required'];
     }
   
     if (password.value.length <= 4) {
-      messages.push('Password must be longer than 4 characters');
+      messages=[...messages, 'Password must be longer than 4 characters'];
     }
   
     if (password.value === 'password') {
-      messages.push('Password cannot be password');
+      messages=[...messages, 'Password cannot be password'];
     }
   
     if (messages.length > 0) {
       e.preventDefault()
       errorElement.innerText = messages.join('\n ')
     }
+
+
     if(messages.length == 0 && click == 1){
       const url = 'http://dummy.restapiexample.com/api/v1/employees';
     
