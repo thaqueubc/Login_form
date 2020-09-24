@@ -2,6 +2,7 @@ const name = document.getElementById('name');
 const password = document.getElementById('password');
 const form = document.getElementById('login-form');
 const errorElement = document.getElementById('error');
+//const welcomeMessage = document.getElementById('welcome');
 let click = 0;
 
 function printName(n){
@@ -32,13 +33,16 @@ function validation(){
     if (password.value === 'password') {
       messages=[...messages, 'Password cannot be password'];
     }
-  
+
+
+    // If any error is found then prevent the form submission and show the error
     if (messages.length > 0) {
       e.preventDefault()
       errorElement.innerText = messages.join('\n ')
     }
 
-
+    // If no error is found and the submit button is clicked then fetch data from 
+    // the rest api 
     if(messages.length == 0 && click == 1){
       const url = 'http://dummy.restapiexample.com/api/v1/employees';
     
@@ -54,7 +58,7 @@ function validation(){
           // console.log(data.employee_name);
            if(data.employee_name == name.value){
              console.log("Found");
-            //welcomeMessage.innerText = "Welcome" + name.value;
+             //welcomeMessage.innerText = "Welcome" + data.employee_name;
              location.href = "welcome.html";
            }
         });
